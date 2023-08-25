@@ -1,0 +1,64 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'oswald', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #8b8888;
+}
+ul
+{
+    position: relative;
+    transform: skewY(-0deg);
+}
+/* en width se cambia el tamaño */
+ul li 
+{
+    position: relative;
+    list-style: none;
+    width: 175px;
+    background: #a770b2;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+/* en transform si se agrega un - al 20 la animacion es hacia la izquierda */
+ul li:hover 
+{
+    background: #717af0;
+    transform: translate(20px);
+}
+
+ul li:hover::before
+{
+    background: #444cbd;
+}
+
+ul li:hover::after
+{
+    background: #444cbd;
+}
+ul li a
+{
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+ul li a:hover
+{
+    color: lightgoldenrodyellow;
+}
+ul li:last-child::after
+{
+    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+}
